@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LeaFLib.BrowserExt",
+  "description": "A browser extension from LeaFrock",
+  "version": "0.1",
+  "background": {
+    "service_worker": "content/BackgroundWorker.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "framework/*",
+        "content/*"
+      ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}
