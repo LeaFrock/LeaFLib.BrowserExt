@@ -1,5 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
-@Body
+<MudLayout>
+    <MudAppBar Elevation="0">
+        LeaFLib浏览器插件
+    </MudAppBar>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Medium">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
 
 <MudThemeProvider />

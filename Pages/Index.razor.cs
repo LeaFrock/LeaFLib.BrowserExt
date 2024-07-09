@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using WebExtensions.Net;
 using WebExtensions.Net.Notifications;
@@ -12,10 +13,8 @@ namespace LeaFLib.BrowserExt.Pages
 
         private async Task NoticeAsync()
         {
-            await WebExtApi.Notifications.Create(new NotificationOptions()
-            {
-                ContextMessage = "123"
-            });
+            await Task.Delay(100);
+
         }
     }
 }
